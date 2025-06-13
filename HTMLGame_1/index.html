@@ -1,0 +1,118 @@
+<html>
+    <head>
+
+        <meta http-equiv = "Content-type" content = "text/html; charset=UTF-8"/>
+        <title>理科問題：示準/示相化石</title>
+        <link rel ="stylesheet" type = "text/css" href = "style.css">
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+
+
+        <main>
+
+            <div class = "screen title" id="js-title">
+                <p class = "title-text"> この化石はどっち！ </p>
+
+                <img src="img/rock.png" class="rock"/>
+                <img src="img/syougeki.png" class="syougeki"/>
+                <img src="img/isikoro.png" class="isikoro"/>
+                <img src="img/pickaxe.png" class="pickaxe"/>
+                <img src="img/kaseki.png" class="kaseki"/>
+                <img src="img/kirakira.png" class="kirakira"/>
+                <img src="img/houki.png" class="houki"/>
+
+                <div class = "button" id ="js-startbutton">
+                    <p>スタート</p>
+                </div>
+                <div class = "button" id ="js-howtoplaybutton">
+                    <p>遊び方</p>
+                </div>
+                    <div class = "screen howtoplay" id="js-howtoplay">
+                        <img src="img/howtoplay.png" class="howto-background"/>
+                        <img src="img/anmonite.png" class="howto-question" id ="js-howtoquestion"/>
+                        <div class ="howto-text" id="js-howtotext">
+                            ①画像をあっていると思うほうに</br>引っ張っていく
+                        </div>
+                        <div class="howto-result" id="js-howtoresult">
+                            解答画面
+                        </div>
+                        <div class ="howto-circle" id="js-howtocircle"></div>
+                        <div class = "button" id ="js-howtoreturn">
+                            <p>タイトルに戻る</p>
+                        </div>
+<!--画像で遊び方確認（未実装）画像と作りかけのjsファイルあり-->
+<!--                    <div class = "button" id ="js-howtolite">
+                            <p>画像で確認する</p>
+                        </div> -->
+                    </div>
+                    <div class="screen howtoplaylite" id="js-howtoplaylite">
+                        <img src="img/howtoplay.png" class="howtoimg"/>
+                        <div class = "button" id ="js-howtoreturn">
+                            <p>タイトルに戻る</p>
+                        </div>
+                        <div class = "button" id ="js-howtoanime">
+                            <p>アニメで確認する</p>
+                        </div>
+                    </div>
+            </div>
+
+            
+            <div class = "screen game" id="js-game">
+                <p class = "question-text"id = "js-questiontext"> 問題表示 </p>
+                <img src="question" id="js-question" class="question"name ="question" />
+            
+                <!--示相化石の箱-->
+                <div class="fossilBox one"id="phasefossil">
+                    <img src="img/box.png"class ="box-one"/>
+                    <p class="box-text one">示相化石</p>
+                </div>
+
+                <!--示準化石の箱-->
+                <div class="fossilBox two" id="indexfossil">
+                    <img src="img/box.png"class ="box-two"/>
+                    <p class="box-text two">示準化石</p>
+                </div>
+
+                <div class = "mini-button" id ="js-nextbutton">
+                    <p>次の問題へ</p>
+                </div>
+
+                <!--結果表示-->
+                <div class ="answer" id = "js-answer">
+                    <img src ="answer"class="answer-img" id="js-answerimg"name="answerimg"/>
+                    <div class = "answer-text" id="js-answertext">正解or不正解</br></div>
+                    <div class = "answer-colum" id="js-answercolum">解説文</div>
+                </div>
+
+            </div>
+
+            <div class = "screen result" id="js-result"style="display: none;">
+                <div class="screen mini-result">
+                    <div class = "page-title" id= "js-pagetitle">正答数！</div>
+                    <p class = "point-text" id = "js-pointtext">得点表示</p>
+                    <img src ="evaluation"class="result-img" id="js-resultimg" name="resultimg"/>
+                    <div class = "evaluation-text" id="js-evaluationtext">級！</div>
+                    <div class = "button" id ="js-returnbutton">
+                        <p>タイトルへ戻る</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        
+        <footer>
+
+        </footer>
+    
+    </body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script src="jquery-ui.min.js"></script>
+
+    <script src="main.js"></script>
+
+</html>

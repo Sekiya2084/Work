@@ -1,0 +1,453 @@
+.screen{
+    background-image: url('img/japanmap.png');
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*タイトル画面*/
+.screen.title{
+    display: grid;
+    grid-template-rows: 50% 10% 10% 10% 10% 10%;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    vertical-align:middle; 
+    text-align: center;
+}
+
+.title-text{
+    display: inline-block;
+    margin: 10% 0;
+    width:100%;
+    font-size: 7vw;
+    font-weight:bold;
+}
+
+.screen.title.button.one{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.screen.title.button.two{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.screen.title.button.three{
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+.screen.title.button.four{
+    grid-row: 5/6;
+    grid-column: 1/2;
+}
+.screen .animation .natto{
+    position: fixed;
+    height: 20%;
+    width: auto;
+    right: 15%;
+    top: 60%;
+}
+.screen .animation .maguro{
+    animation: fade-in 3s ease-in-out infinite alternate;
+    position: fixed;
+    height: 20%;
+    width: auto;
+    left: 25%;
+    top: 50%;
+    opacity: 0;
+}
+.screen .animation .bird{
+    animation: tori 12s ease-in-out infinite forwards;
+    position: fixed;
+    height: 15%;
+    width: auto;
+    right: 17%;
+    top: 14%;
+    
+}
+
+.screen .animation .fly-bird{
+    animation: fly 12s ease-in-out infinite forwards;
+    position: fixed;
+    height: 15%;
+    width: auto;
+    right: 10%;
+    top: 0%;    
+    
+}
+
+@keyframes fly {
+    0%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+        transform: translate(-100px ,80px);
+    }
+    50% {
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-300px ,-80px);
+    }
+}
+
+@keyframes tori {
+    0%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*----------------------------------------------------------------------*/
+
+
+/*ゲーム画面*/
+.screen.game{
+    display: grid;
+    position: relative;
+    grid-template-rows: 30% 20% 30% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+}
+
+.screen.game .question{
+    user-select: none;
+    text-shadow: 1%,1%,3%,black;
+    position: absolute;
+    grid-row: 1/2;
+    grid-column: 1/6;
+    font-size: 6vw;
+    z-index: 200;
+}
+
+.screen.game .question:hover{
+    animation: sizetrance 1s ease-in-out infinite alternate;
+}
+
+@keyframes sizetrance {
+    0% {
+        transform: scale(1);
+        }
+    100%{
+        transform: scale(.9);
+    }
+}
+
+.question-text{
+    user-select: none;
+    background-color: #FFF;
+    margin: 20 0;
+    width:100%;
+    font-size: 6vw;
+    font-weight:bold;
+}
+
+.screen.game .question-text{
+    grid-row: 2/3;
+    grid-column: 1/6;
+}
+
+
+.screen.game img{
+    width: auto;
+    height: 100%;
+}
+.screen.game .prefecture.one img{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.screen.game .prefecture.two img{
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+
+.screen.game .prefecture.three img{
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+.screen.game .prefecture{
+    display: grid;
+    grid-template-rows: subgrid;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+}
+
+.screen.game .prefecture.one{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.screen.game .prefecture.two{
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+.screen.game .prefecture.three{
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+.screen.game .pretext{
+    user-select: none;
+    font-size: 4vw;
+    height: auto;
+    z-index: 10;
+}
+
+.screen.game .pretext.one{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.screen.game .pretext.two{
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+
+.screen.game .pretext.three{
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+.screen.game .minibutton{
+    grid-row: 4/5;
+    grid-column: 1/6;
+}
+
+.answer-window{
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 30% 1fr;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 40%;
+    z-index: 9900;
+    background-color: #FFF;
+    vertical-align:middle;
+}
+
+.answer-window .colum-text{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    height: auto;
+    font-size:3vw;
+    font-weight:bold;
+}
+
+.answer-window .answer-text{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    height: auto;
+    font-size: 5vw;
+    font-weight:bold;
+}
+.answer-window .colum-text.name{
+    font-size: 1vw;
+}
+
+.answer-window .answer-img{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    width: 100%;
+}
+
+.timer{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 5%;
+    left: 5%;
+    height: 15%;
+    width: auto;
+}
+
+.timer-text{
+    font-size: 6vw;
+    font-weight:bold;
+}
+/*----------------------------------------------------------------------*/
+
+
+/*リザルト画面*/
+.screen.result{
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-window{
+    display: grid;
+    text-align: center;
+    grid-template-rows: 15% 55% 20% 10%;
+    grid-template-columns: 50% 50%;
+    background-image: url('null');
+    background-color:#FFF;
+    width: 90%;
+    height: 90%;
+}
+
+.result-window .button{
+    grid-row: 4/5;
+    grid-column: 1/3;
+}
+
+.result-window .page-title{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-size: 6vw;
+}
+
+.result-window .point-text{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 8vw;
+}
+
+.result-window .result-img{
+    grid-row: 1/3;
+    grid-column: 2/3;
+    height: 100%;
+    width: 100%
+}
+
+.result-window .evaluation-text{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    font-size: 3vw;
+    font-weight:bold;
+}
+/*----------------------------------------------------------------------*/
+
+
+.button p{
+    background: #eee;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 250px;
+    padding: 10px 25px;
+    font-family: "Noto Sans Japanese";
+    color: #333333;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.button p{
+    display: fixed;
+}
+
+.button p:hover {
+    background: #333333;
+    color: #FFF;
+    cursor: pointer;
+}
+.button p:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button p:hover:after {
+    border-color: #FFF;
+}
+
+.minibutton p{
+    background: #eee;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100px;
+    padding: 10px 25px;
+    font-family: "Noto Sans Japanese";
+    color: #333333;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.minibutton p{
+    display: fixed;
+}
+
+.minibutton p:hover {
+    background: #333333;
+    color: #FFF;
+    cursor: pointer;
+}
+.minibutton p:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.minibutton p:hover:after {
+    border-color: #FFF;
+}
+
+.minibutton{
+    bottom: 1%;
+    left: 70%;
+    width: 30%;
+    z-index: 9999;
+}

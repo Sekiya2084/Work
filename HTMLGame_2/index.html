@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>社会問題：県庁所在地</title>
+        <meta http-equiv = "Content-type" content = "text/html; charset=UTF-8"/>
+
+        <link rel ="stylesheet" type = "text/css" href = "style.css">
+
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+            <div class = "screen title" id="js-title">
+                <p class = "title-text"> どこの県庁所在地？ </p>
+                <div class = "button one" id ="js-easybutton">
+                    <p>easy</p>
+                </div>
+                <div class = "button two" id ="js-normalbutton">
+                    <p>normal</p>
+                </div>
+                <div class = "button three" id ="js-hardbutton">
+                    <p>hard</p>
+                </div>
+                <div class = "button four" id ="js-veryhardbutton">
+                    <p>veryhard</p>
+                </div>
+                <div class = "animation">
+                    <img src = "img/natto.png" class = "natto"/>
+                    <img src = "img/maguro.png" class ="maguro"/>
+                    <img src = "img/tori.png" class ="bird"/>
+                    <img src = "img/toritobu.png" class="fly-bird"/>
+                </div>
+            </div>
+
+            <div class = "screen game" id="js-game">
+                
+                <p class = "question-text"id = "js-questiontext"> はどこの県庁所在地？ </p>
+
+                <div class ="question"id="js-question">問題表示</div>
+
+                <div class="prefecture one" >
+                    <div class = "pretext one" id ="prefecture1">name1</div>
+                    <img src ="prefecture0" name="prefecture1" class ="js-prefecture"/>
+                </div>
+                <div class="prefecture two">
+                    <div class = "pretext two" id = "prefecture2">name2</div>
+                    <img src ="prefecture1" name="prefecture2" class ="js-prefecture"/>
+                </div>
+                <div class="prefecture three">
+                    <div class = "pretext three"id = "prefecture3">name3</div>
+                    <img src ="prefecture2" name="prefecture3" class ="js-prefecture"/>
+                </div>
+
+                <div class = "minibutton" id ="js-nextbutton">
+                    <p>次の問題へ</p>
+                </div>
+
+                <div class = "timer">
+                    <img src = "img/publicdomainq-0082601xytozx.png" class = "timer-img" id="js-timerimg"/>
+                    <p class = "timer-text" id ="js-timer">時間表示</p>
+                </div>
+
+                <!--結果表示-->
+                <div class ="answer-window" id ="js-answer">
+                    <img src ="answer" class="answer-img" id="js-answerimg"/>
+                    <div class = "answer-text" id="js-answertext">正解or不正解</br></div>
+                    <div class = "colum-text" id="js-columtext"></div>
+                </div>  
+
+            </div>
+
+            <div class = "screen result" id="js-result">
+                <div class="result-window">
+                    <div class = "page-title" id= "js-pagetitle">正答数！</div>
+
+                    <p class = "point-text" id = "js-pointtext">得点表示</p>
+
+                    <img src ="evaluation"class="result-img" id ="js-resultimg"/>
+
+                    <div class = "evaluation-text" id="js-evaluationtext">評価</div>
+                    
+                    <div class = "button" id ="js-returnbutton">
+                        <p>タイトルへ戻る</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        
+        <footer>
+
+        </footer>
+    
+    </body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script src="jquery-ui.min.js"></script>
+
+    <script src="main.js"></script>
+
+</html>
